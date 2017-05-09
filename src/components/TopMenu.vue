@@ -1,0 +1,22 @@
+<template>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="collapsed navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-5" aria-expanded="false"><span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+        <a href="#" class="navbar-brand">Brand</a></div>
+      <div v-if="profile.length" class="collapse navbar-collapse" id="bs-example-navbar-collapse-5"><p
+        class="navbar-text navbar-right">
+        Signed in as <a href="#" class="navbar-link">{{ profile }}</a></p></div>
+    </div>
+  </nav>
+</template>
+
+<script>
+  // import Firebase from 'firebase'
+  export default {
+    name: 'top-menu',
+    props: ['profile']
+  }
+</script>
