@@ -158,7 +158,7 @@
       </div>
 
     </div>
-    <!--<router-view></router-view>-->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -166,17 +166,10 @@
   /* eslint-disable */
   import TopMenu from './components/TopMenu.vue'
   import Firebase from 'firebase'
-  let config = {
-    apiKey: 'AIzaSyBT42Eo24S-vaR0QXMOL7MhCbqOWSPg3a4',
-    authDomain: 'vue-firebase-55aac.firebaseapp.com',
-    databaseURL: 'https://vue-firebase-55aac.firebaseio.com',
-    projectId: 'vue-firebase-55aac',
-    storageBucket: 'vue-firebase-55aac.appspot.com',
-    messagingSenderId: '356906720314'
-  }
-  let app = Firebase.initializeApp(config)
-  let db = app.database()
+  import {db} from './firebase'
+
   let booksRef = db.ref('books')
+
   export default {
     name: 'app',
     components: {
