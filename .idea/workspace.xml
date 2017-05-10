@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c598978d-3469-4d7c-ab9d-00313f6246a5" name="Default" comment="first commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Quiz.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/firebase.js" />
+    <list default="true" id="c598978d-3469-4d7c-ab9d-00313f6246a5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Quiz.vue" afterPath="$PROJECT_DIR$/src/components/Quiz.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +22,8 @@
           <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1316">
-                  <caret line="224" column="15" lean-forward="false" selection-start-line="224" selection-start-column="10" selection-end-line="224" selection-end-column="15" />
+                <state relative-caret-position="557">
+                  <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
                   <folding>
                     <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
                     <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -32,7 +31,7 @@
                     <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
                     <element signature="e#3875#3882#1" expanded="true" />
-                    <element signature="e#6153#6199#0" expanded="true" />
+                    <element signature="e#6170#6216#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -77,8 +76,8 @@
           <file leaf-file-name="Quiz.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/Quiz.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+                <state relative-caret-position="479">
+                  <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -130,8 +129,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/firebase.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/App.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/Quiz.vue" />
+        <option value="$PROJECT_DIR$/src/App.vue" />
       </list>
     </option>
   </component>
@@ -864,7 +864,7 @@
       <updated>1493823184285</updated>
       <workItem from="1493823187767" duration="5115000" />
       <workItem from="1494163210635" duration="152000" />
-      <workItem from="1494168730817" duration="37432000" />
+      <workItem from="1494168730817" duration="39470000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1494174107258</created>
@@ -901,11 +901,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494334107895</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="first commit">
+      <created>1494417716452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494417716452</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42699000" />
+    <option name="totallyTimeSpent" value="44737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1026,7 +1033,7 @@
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#3875#3882#1" expanded="true" />
-            <element signature="e#6153#6199#0" expanded="true" />
+            <element signature="e#6170#6216#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,7 +1071,7 @@
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#3875#3882#1" expanded="true" />
-            <element signature="e#6153#6199#0" expanded="true" />
+            <element signature="e#6170#6216#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1173,14 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TopMenu.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -1215,10 +1214,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Quiz.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1316">
-          <caret line="224" column="15" lean-forward="false" selection-start-line="224" selection-start-column="10" selection-end-line="224" selection-end-column="15" />
+        <state relative-caret-position="557">
+          <caret line="111" column="40" lean-forward="false" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -1226,16 +1241,8 @@
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#3875#3882#1" expanded="true" />
-            <element signature="e#6153#6199#0" expanded="true" />
+            <element signature="e#6170#6216#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Quiz.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>

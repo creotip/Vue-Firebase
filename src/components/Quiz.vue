@@ -35,6 +35,25 @@
         </form>
       </div>
     </div>
+
+    <div v-for="(item, index) in quiz" class="panel panel-default">
+      <div class="panel-heading">
+        <h5><span>{{ index + 1 }}. </span>{{ item.question }}</h5>
+      </div>
+      <div class="panel-body">
+        <ol>
+          <li v-for="(answer, index) in item.answers">
+            {{ answer }}
+          </li>
+        </ol>
+        <ul>
+          <li>
+            Right answer <span class="badge">{{item.rightAnswer}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </template>
 

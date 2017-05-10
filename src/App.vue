@@ -109,7 +109,7 @@
                 <input type="text" id="bookAuthor" class="form-control" v-model="newBook.author">
               </div>
               <div class="form-group">
-                <label for="bookUrl">Title:</label>
+                <label for="bookUrl">Url:</label>
                 <input type="text" id="bookUrl" class="form-control" v-model="newBook.url">
               </div>
               <br>
@@ -140,7 +140,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="book in books">
+              <tr class="books-list" v-for="book in books">
                 <td>
                   <a :href="book.url" target="_blank">{{book.title}}</a>
                 </td>
