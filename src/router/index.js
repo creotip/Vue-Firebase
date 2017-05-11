@@ -1,22 +1,33 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import Hello from '@/components/Hello'
 import Quiz from '../components/Quiz.vue'
+import auth from '../firebase/auth'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/quiz',
-      name: 'Quiz',
-      component: Quiz
-    }
-  ]
+const routes = [
+  {
+    path: '/classes',
+    name: 'Hello',
+    component: Hello
+  },
+  {path: '/', redirect: 'classes'},
+  {
+    path: '/quiz',
+    name: 'Quiz',
+    component: Quiz
+  }
+]
+
+const router = new VueRouter({
+  routes
 })
+
+router.beforeEach((to, from, next) => {
+  auth.authUser().then(() => {
+    next()
+  })
+})
+
+export default router
