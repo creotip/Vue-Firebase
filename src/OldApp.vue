@@ -87,6 +87,75 @@
 
       </div>
 
+      <div v-if="isAuthenticated" class="wrap-customers">
+        <div v-if="showToast" class="alert alert-success" role="alert">
+          <button @click="closeToast" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Well done!</strong> You added a new book.
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Add Book</h3>
+          </div>
+          <div class="panel-body">
+            <form id="form" class="form-inline" v-on:submit.prevent="addBook">
+              <div class="form-group">
+                <label for="bookTitle">Title:</label>
+                <input type="text" id="bookTitle" class="form-control" v-model="newBook.title">
+              </div>
+              <div class="form-group">
+                <label for="bookAuthor">Author:</label>
+                <input type="text" id="bookAuthor" class="form-control" v-model="newBook.author">
+              </div>
+              <div class="form-group">
+                <label for="bookUrl">Url:</label>
+                <input type="text" id="bookUrl" class="form-control" v-model="newBook.url">
+              </div>
+              <br>
+              <br>
+              <input type="submit" class="btn btn-primary" value="Add Book">
+            </form>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>
+              Books Lists
+            </h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th>
+                  Title
+                </th>
+                <th>
+                  Author
+                </th>
+                <th>
+                  Delete
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="books-list" v-for="book in books">
+                <td>
+                  <a :href="book.url" target="_blank">{{book.title}}</a>
+                </td>
+                <td>
+                  {{book.author}}
+                </td>
+                <td>
+                  <span class="glyphicon glyphicon-trash" v-on:click="removeBook(book)"></span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
     </div>
     <router-view></router-view>
@@ -252,7 +321,7 @@
           displayName: vm.auth.userName
         }).then(function () {
           vm.auth.message = 'Successfully udpated user profile.';
-          // console.log(vm.auth.username)
+          console.log(vm.auth.username)
         }, function (error) {
           vm.auth.message = 'Failed to update user profile.';
           vm.auth.hasErrors = true;

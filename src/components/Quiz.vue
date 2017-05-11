@@ -91,6 +91,5 @@
         this.newQuiz.newAnswerText = ''
       }
     }
-
   }
 </script>

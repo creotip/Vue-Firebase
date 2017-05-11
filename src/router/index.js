@@ -16,7 +16,10 @@ export default new Router({
     {
       path: '/quiz',
       name: 'Quiz',
-      component: Quiz
+      component: Quiz,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
