@@ -9,8 +9,6 @@ import VueParticles from 'vue-particles'
 Vue.use(VueFire)
 Vue.use(VueParticles)
 Vue.config.productionTip = false
-// import 'toastr/build/toastr.min.css'
-// import 'materialize-css/dist/css/materialize.min.css'
 
 /* eslint-disable no-new */
 new Vue({
