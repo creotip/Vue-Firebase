@@ -89,7 +89,7 @@
 
 
     </div>
-    <router-view v-if="isAuthenticated" ></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
