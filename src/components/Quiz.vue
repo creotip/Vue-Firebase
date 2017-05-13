@@ -80,15 +80,19 @@
     },
     methods: {
       addQuiz () {
-        quizRef.push(this.newQuiz)
-        this.newQuiz.question = ''
-        this.newQuiz.newAnswerText = ''
-        this.newQuiz.answers = []
-        this.newQuiz.rightAnswer = ''
+        if (this.newQuiz.question.length) {
+          quizRef.push(this.newQuiz)
+          this.newQuiz.question = ''
+          this.newQuiz.newAnswerText = ''
+          this.newQuiz.answers = []
+          this.newQuiz.rightAnswer = ''
+        }
       },
       addAnswer () {
-        this.newQuiz.answers.push(this.newQuiz.newAnswerText)
-        this.newQuiz.newAnswerText = ''
+        if (this.newQuiz.newAnswerText.length) {
+          this.newQuiz.answers.push(this.newQuiz.newAnswerText)
+          this.newQuiz.newAnswerText = ''
+        }
       }
     }
   }
