@@ -1,5 +1,8 @@
 <template>
   <div class="quiz container">
+    <div class="page-header">
+      <h1 style="text-align: center">Vue.js 2 & Firebase</h1>
+    </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>Add question</h3>
