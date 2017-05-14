@@ -1,6 +1,14 @@
 <template>
-  <div class="hello">
-    <!--<h1>{{ msg }}</h1>-->
+  <div class="hello container">
+    <div class="page-header">
+      <h1 style="text-align: center">This is home page</h1>
+    </div>
+    <div class="jumbotron">
+      <h3>Hello, world!</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis culpa dicta dolorum porro quasi. Culpa itaque tempora ut? Atque ex odio omnis veniam voluptatum. A consequuntur illo laudantium neque pariatur?</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+
   </div>
 </template>
 
@@ -17,9 +25,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+
 
 ul {
   list-style-type: none;
@@ -31,7 +37,5 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
+
 </style>

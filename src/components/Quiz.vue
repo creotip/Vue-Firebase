@@ -1,5 +1,8 @@
 <template>
   <div class="quiz container">
+    <div class="page-header">
+      <h1 style="text-align: center">This is quiz page</h1>
+    </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3>Add question</h3>
@@ -36,9 +39,15 @@
       </div>
     </div>
 
-    <div v-for="(item, index) in quiz" class="panel panel-default">
+    <div v-for="(item, index) in quiz" class="single-quiz-item panel panel-default">
       <div class="panel-heading">
-        <h5><span>{{ index + 1 }}. </span>{{ item.question }}</h5>
+        <h5>
+          <span>{{ index + 1 }}. </span>
+          {{ item.question }}
+          <span class="remove-quiz-item glyphicon glyphicon-trash pull-right" v-on:click="removeQuiz(item)"></span>
+        </h5>
+
+
       </div>
       <div class="panel-body">
         <ol>
@@ -54,10 +63,26 @@
       </div>
     </div>
 
+    <div v-show="confirm" class="confirm-remove modal fade in" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Are you sure you want to remove this item ?</h4>
+          </div>
+          <div class="modal-footer">
+            <button @click="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button @click="confirmRemove(item)" type="button" class="btn btn-primary">Yes i want</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </div>
 </template>
 
 <script>
+  import Firebase from 'firebase'
   import { db } from '../firebase'
 
   let quizRef = db.ref('quiz')
@@ -70,6 +95,7 @@
     data () {
       return {
         msg: 'This is quiz admin',
+        confirm: false,
         newQuiz: {
           question: '',
           newAnswerText: '',
@@ -93,7 +119,35 @@
           this.newQuiz.answers.push(this.newQuiz.newAnswerText)
           this.newQuiz.newAnswerText = ''
         }
+      },
+      removeQuiz (item) {
+        this.confirm = true
+        // quizRef.child(item['.key']).remove()
+      },
+      confirmRemove (item) {
+        quizRef.child(item['.key']).remove()
+      },
+      closeModal () {
+        this.confirm = false
       }
+    },
+    mounted () {
+      Firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          console.log('User is logged in')
+        } else {
+          console.log('User is not logged in')
+        }
+      })
     }
   }
 </script>
+<style>
+  .remove-quiz-item {
+    cursor: pointer;
+  }
+
+  .confirm-remove {
+    display: block;
+  }
+</style>

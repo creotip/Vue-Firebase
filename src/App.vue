@@ -6,9 +6,6 @@
 
     <top-menu :profile="profileName"></top-menu>
     <div class="container">
-      <div class="page-header">
-        <h1 style="text-align: center">Vue.js 2 & Firebase</h1>
-      </div>
 
       <div v-if="!isAuthenticated" id="loginContainer">
         <div class="row">
@@ -43,53 +40,8 @@
         </div>
       </div>
 
-      <div v-if="isAuthenticated" class="auth-content" id="content">
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Welcome {{displayName()}}</h3>
-              </div>
-
-              <div class="panel-body">
-                <p>You have been currently logged-in using firebase.</p>
-                <br/>
-                <h4>{{displayName()}} Profile Details</h4>
-                <hr/>
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label for="inputUserName" class="col-sm-2 control-label">Username</label>
-                    <div class="col-sm-10">
-                      <input v-model="auth.userName" type="text" class="form-control" id="inputUserName"
-                             placeholder="Username">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button @click="updateProfile" type="button" class="btn btn-default">Update Profile</button>
-                    </div>
-                  </div>
-                </form>
-                <div v-if="auth.message !== ''" class="alert" role="alert"
-                     :class="{'alert-danger': auth.hasErrors, 'alert-success': !auth.hasErrors}">
-                  <button @click="dismissAlert" type="button" class="close"><span aria-hidden="true">×</span></button>
-                  <p><strong>{{auth.message}}</strong></p>
-                </div>
-              </div>
-
-              <div class="panel-footer">
-                <button @click="signOut" class="btn btn-danger" type="button">Signout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
     </div>
-    <router-view v-if="isAuthenticated" ></router-view>
+    <router-view v-if="isAuthenticated"></router-view>
   </div>
 </template>
 
@@ -97,17 +49,11 @@
   /* eslint-disable */
   import TopMenu from './components/TopMenu.vue'
   import Firebase from 'firebase'
-  import {db} from './firebase'
-
-  let booksRef = db.ref('books')
 
   export default {
     name: 'app',
     components: {
       TopMenu
-    },
-    firebase: {
-      books: booksRef
     },
     data () {
       return {
@@ -120,11 +66,6 @@
           message: '',
           userName: '',
           hasErrors: false
-        },
-        newBook: {
-          title: '',
-          author: '',
-          url: ''
         },
         showToast: false
       }
@@ -151,18 +92,8 @@
       }
     },
     methods: {
-      addBook () {
-        if (this.newBook.title.length) {
-          booksRef.push(this.newBook)
-          this.newBook.title = ''
-          this.newBook.author = ''
-          this.newBook.url = ''
-          this.showToast = true
-        }
-
-      },
       removeBook (book) {
-        booksRef.child(book['.key']).remove()
+        // booksRef.child(book['.key']).remove()
       },
       closeToast () {
         this.showToast = false
@@ -174,21 +105,26 @@
        * @param object event
        */
       login: function (event) {
-        var vm = this;
-        vm.auth.message = '';
-        vm.auth.hasErrors = false;
+        this.loader = true
+        var vm = this
+        vm.auth.message = ''
+        vm.auth.hasErrors = false
 
         if (vm.auth.email === '' || vm.auth.password === '') {
-          alert('Please provide the email and password');
-          return;
+          alert('Please provide the email and password')
+          vm.loader = false
+          return
         }
         // Sign-in the user with the email and password
         Firebase.auth().signInWithEmailAndPassword(vm.auth.email, vm.auth.password)
           .then(function (data) {
             vm.auth.user = Firebase.auth().currentUser;
+            vm.loader = false
+            vm.$router.push('/quiz')
           }).catch(function (error) {
-          vm.auth.message = error.message;
-          vm.auth.hasErrors = true;
+          vm.auth.message = error.message
+          vm.auth.hasErrors = true
+          vm.loader = false
         });
       },
 
