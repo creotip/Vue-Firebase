@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Hello from '@/components/Hello'
-import Quiz from '../components/Quiz.vue'
 import auth from '../firebase/auth'
 
 Vue.use(VueRouter)
@@ -12,12 +11,7 @@ const routes = [
     name: 'Hello',
     component: Hello
   },
-  {path: '/', redirect: 'classes'},
-  {
-    path: '/quiz',
-    name: 'Quiz',
-    component: Quiz
-  }
+  {path: '/', redirect: 'classes'}
 ]
 
 const router = new VueRouter({

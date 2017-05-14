@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+<h1>    This page is logged in</h1>
     {{ items }}
     <ul>
       <li v-for="item in items">
