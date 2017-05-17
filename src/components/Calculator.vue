@@ -30,7 +30,10 @@
       </div>
 
       <div class="wrap-result">
-        <h2>{{ result.toFixed().toLocaleString() }}</h2>
+        <h2>{{ result.toLocaleString(undefined, {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }) }}</h2>
       </div>
     </div>
   </div>
