@@ -15,6 +15,9 @@
         <li>
           <router-link to="/profile" >profile</router-link>
         </li>
+        <li>
+          <router-link to="/calculator" >calculator</router-link>
+        </li>
       </ul>
       <div v-if="profile.length" class="collapse navbar-collapse" id="bs-example-navbar-collapse-5"><p
         class="navbar-text navbar-right">

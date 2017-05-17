@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Quiz from '../components/Quiz.vue'
 import Profile from '../components/Profile.vue'
+import Calculator from '../components/Calculator.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,14 @@ export default new Router({
       path: '/quiz',
       name: 'Quiz',
       component: Quiz,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/calculator',
+      name: 'Calculator',
+      component: Calculator,
       meta: {
         requiresAuth: true
       }
