@@ -61,23 +61,23 @@
           </li>
         </ul>
       </div>
+      <div v-show="confirm" class="confirm-remove modal fade in" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Are you sure you want to remove this item ?</h4>
+            </div>
+            <div class="modal-footer">
+              <button @click="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button @click="confirmRemove(item)" type="button" class="btn btn-primary">Yes i want</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
     </div>
 
-    <div v-show="confirm" class="confirm-remove modal fade in" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-              aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Are you sure you want to remove this item ?</h4>
-          </div>
-          <div class="modal-footer">
-            <button @click="closeModal" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button @click="confirmRemove(item)" type="button" class="btn btn-primary">Yes i want</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
   </div>
 </template>
 
@@ -129,6 +129,7 @@
       },
       confirmRemove (item) {
         quizRef.child(item['.key']).remove()
+        this.confirm = false
       },
       closeModal () {
         this.confirm = false
