@@ -106,12 +106,15 @@
     },
     methods: {
       addQuiz () {
-        if (this.newQuiz.question.length) {
+        let quizValidation = this.newQuiz.question.length && this.newQuiz.answers.length && this.newQuiz.rightAnswer
+        if (quizValidation) {
           quizRef.push(this.newQuiz)
           this.newQuiz.question = ''
           this.newQuiz.newAnswerText = ''
           this.newQuiz.answers = []
           this.newQuiz.rightAnswer = ''
+        } else {
+          console.log('Please fill out the form!')
         }
       },
       addAnswer () {
