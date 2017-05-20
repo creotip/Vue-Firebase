@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c598978d-3469-4d7c-ab9d-00313f6246a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/calc.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/quizApp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/quizApp.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Calculator.vue" afterPath="$PROJECT_DIR$/src/components/Calculator.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/TopMenu.vue" afterPath="$PROJECT_DIR$/src/components/TopMenu.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/quizApp.vue" afterPath="$PROJECT_DIR$/src/components/quizApp.vue" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -141,10 +132,11 @@
           <file leaf-file-name="quizApp.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/quizApp.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="28" column="70" lean-forward="true" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+                <state relative-caret-position="252">
+                  <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
                   <folding>
                     <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="e#1421#1976#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -1121,11 +1113,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495065993054</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="final quiz">
+      <created>1495280508506</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495280508506</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59029000" />
+    <option name="totallyTimeSpent" value="64696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
@@ -1232,7 +1231,8 @@
     <MESSAGE value="form validation" />
     <MESSAGE value="first commit" />
     <MESSAGE value="calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="calculator" />
+    <MESSAGE value="final quiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="final quiz" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1663,10 +1663,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/quizApp.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="28" column="70" lean-forward="true" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        <state relative-caret-position="252">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#1421#1976#0" expanded="false" />
           </folding>
         </state>
       </provider>

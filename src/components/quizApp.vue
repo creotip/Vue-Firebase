@@ -14,8 +14,10 @@
 
         <div class="answers list-group">
           <ul class="list-group">
-            <li class="list-group-item" v-for="(answer, index) in question.answers" @click="clickedAnswer(index)">
-              {{index}}. {{answer}}
+            <li class="list-group-item"  v-for="(answer, index) in question.answers" @click="clickedAnswer(index); toggleClass();" :key="index">
+              <span :class="{active: activeItem}" @click="toggleClass(answer)">
+                {{index}}. {{answer}}
+              </span>
             </li>
           </ul>
         </div>
@@ -76,9 +78,9 @@
     name: 'quizApp',
     data () {
       return {
-        score: 0,
         quizIndex: 0,
         quizLength: questions.length,
+        activeItem: false,
         questions,
         checkedAnswers: Array(questions.length).fill('')
       }
@@ -92,7 +94,11 @@
         this.quizIndex--
       },
       clickedAnswer: function (index) {
+//        this.activeItem = false
         this.checkedAnswers.splice(this.quizIndex, 1, index)
+      },
+      toggleClass: function (event) {
+        this.activeItem = !this.activeItem
       },
       // Return "true" count in userResponses
       computeScore: function (e) {
@@ -103,19 +109,13 @@
             rightAnswers++
           }
         })
-        this.score = rightAnswers
         return rightAnswers
       },
       restart: function () {
-        this.$router.push('quiz-app')
         this.score = 0
         this.quizIndex = 0
         this.checkedAnswers = Array(questions.length).fill('')
       }
-    },
-    updated () {
-      //
-      // console.log(this.computeScore())
     }
   }
 </script>
