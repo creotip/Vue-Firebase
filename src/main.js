@@ -10,6 +10,8 @@ Vue.use(VueFire)
 Vue.use(VueParticles)
 Vue.config.productionTip = false
 
+// import './assets/calc.scss'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

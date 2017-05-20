@@ -4,7 +4,7 @@ import Hello from '@/components/Hello'
 import Quiz from '../components/Quiz.vue'
 import Profile from '../components/Profile.vue'
 import Calculator from '../components/Calculator.vue'
-
+import quizApp from '../components/quizApp.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -32,6 +32,14 @@ export default new Router({
       path: '/calculator',
       name: 'Calculator',
       component: Calculator,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/quiz-app',
+      name: 'quizApp',
+      component: quizApp,
       meta: {
         requiresAuth: true
       }
